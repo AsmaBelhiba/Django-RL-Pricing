@@ -1,5 +1,4 @@
 
----
 
 ```markdown
 # 🛒 Dynamic Pricing API with Reinforcement Learning
