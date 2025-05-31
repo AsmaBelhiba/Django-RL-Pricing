@@ -119,7 +119,7 @@ GET     /rest/products/categories/
 POST    /rest/products/update-price/
 ```
 
-🔐 Authentication & Security
+## 🔐 Authentication & Security
 Development Mode (DEBUG=True):
 Authentication is disabled (AllowAny), so you can access the endpoints freely during local development.
 
@@ -224,8 +224,11 @@ dynamic_pricing_api/
 - 📊 Admin dashboard for training analytics
 
 ---
-📜 License
+
+##📜 License
+
 Distributed under the [MIT License(https://opensource.org/licenses/MIT)]. See the full LICENSE file for more information.
+
 ---
 ## 🙌 Acknowledgements
 
