@@ -1,8 +1,5 @@
-Great start! Here's your updated and enriched `README.md` with the missing components included — **OAuth2**, **REST API**, and **rate throttling** — while keeping your original structure clean and professional.
 
----
 
-```markdown
 # 🛒 Dynamic Pricing API with Reinforcement Learning
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
@@ -12,7 +9,8 @@ Great start! Here's your updated and enriched `README.md` with the missing compo
 
 ---
 
-This project is a Django-based API for e-commerce dynamic pricing, powered by **Reinforcement Learning** (OpenAI Gym + Stable Baselines3).  
+This project is a Django-based API for e-commerce dynamic pricing, powered by **Reinforcement Learning** 
+(OpenAI Gym + Stable Baselines3).  
 Each product learns how to adjust its price based on stock levels, sales, and historical data — **automatically**.  
 This project was proposed by Mr. [Chaouki Bayoudhi](https://github.com/ChaoukiBayoudhi), a computer science teacher at the High Institute of Management of Tunis.
 
@@ -105,7 +103,7 @@ The API uses **OAuth2 token-based authentication**:
 1. Obtain a token:
     ```
     POST /o/token/ 
-    with username, password, client_id, client_secret
+    with grant_type, client_id, client_secret, scope
     ```
 
 2. Use the token in Postman under **Authorization → Bearer Token**
@@ -117,12 +115,14 @@ The API uses **OAuth2 token-based authentication**:
 Examples:
 
 ```http
-GET     /api/products/
-GET     /api/products/<id>/
-POST    /api/products/<id>/update-price/
+GET     /rest/products/
+GET     /rest/categories/
+POST    /rest/update-price/
 ```
 
-All endpoints are secured by OAuth2 and **rate-limited** to prevent abuse.
+## 🔐 Authentication & Security
+Development Mode (DEBUG=True):
+Authentication is disabled (AllowAny), so you can access the endpoints freely during local development.
 
 ---
 
@@ -223,17 +223,14 @@ dynamic_pricing_api/
 - 🔁 Async parallel training
 - 🧠 Reward shaping enhancements
 - 📊 Admin dashboard for training analytics
-- 🐳 Docker containerization
 
 ---
 
-## 📜 License
+##📜 License
 
-Distributed under the [MIT License](https://opensource.org/licenses/MIT).  
-See the full [LICENSE](./LICENSE) file for more details.
+Distributed under the [MIT License(https://opensource.org/licenses/MIT)]. See the full LICENSE file for more information.
 
 ---
-
 ## 🙌 Acknowledgements
 
 - [Django](https://www.djangoproject.com)
