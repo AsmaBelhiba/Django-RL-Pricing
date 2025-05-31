@@ -224,7 +224,9 @@ dynamic_pricing_api/
 - 📊 Admin dashboard for training analytics
 
 ---
-
+📜 License
+Distributed under the [MIT License(https://opensource.org/licenses/MIT)]. See the full LICENSE file for more information.
+---
 ## 🙌 Acknowledgements
 
 - [Django](https://www.djangoproject.com)
