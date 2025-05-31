@@ -116,8 +116,8 @@ Examples:
 
 ```http
 GET     /rest/products/
-GET     /rest/products/categories/
-POST    /rest/products/update-price/
+GET     /rest/categories/
+POST    /rest/update-price/
 ```
 
 ## 🔐 Authentication & Security
