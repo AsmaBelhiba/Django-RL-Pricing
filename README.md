@@ -1,6 +1,5 @@
 
 
-```markdown
 # 🛒 Dynamic Pricing API with Reinforcement Learning
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
