@@ -72,6 +72,7 @@ OAUTH2_PROVIDER = {
     }
 }
 DEVELOPMENT_MODE = True
+
 if DEVELOPMENT_MODE:
     REST_FRAMEWORK = {
         'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -80,6 +81,12 @@ if DEVELOPMENT_MODE:
         'DEFAULT_PERMISSION_CLASSES': (
             'rest_framework.permissions.AllowAny',
         ),
+        'DEFAULT_THROTTLE_CLASSES': [
+            'rest_framework.throttling.ScopedRateThrottle',
+        ],
+        'DEFAULT_THROTTLE_RATES': {
+            'pricing': '10/minute',
+        },
     }
 else:
     REST_FRAMEWORK = {
@@ -91,12 +98,14 @@ else:
         ),
         'DEFAULT_THROTTLE_CLASSES': [
             'rest_framework.throttling.UserRateThrottle',
+            'rest_framework.throttling.ScopedRateThrottle',
         ],
         'DEFAULT_THROTTLE_RATES': {
-            'user': '100/day',  
-            'pricing': '10/minute',  
+            'user': '100/day',
+            'pricing': '10/minute',
         },
     }
+
 
 MIDDLEWARE = [
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
